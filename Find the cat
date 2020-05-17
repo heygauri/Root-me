@@ -1,0 +1,30 @@
+Download the file ch9.zip
+
+Unzip the file and open using FTKimager.
+
+You will get an ".odt " file among other files including pdf files. Open it and you will see a cat image.
+
+Create forensic image of the file chall9 using FTKimager and save it as cat.001
+
+Open the image cat.001 in ftk imager and analyze root > umallocated space .
+
+There are 8 files 
+   { 001675    %pdf
+     008582    %pdf
+     011143    %pdf
+     015426    opendocument.text
+     024589    PHP
+     028375
+     034536
+     239336
+    }
+		
+Upon looking at the raw data of each file the first 3 files are pdf files, 4th one is the ODT file, 5th one is a PHP file
+and the last three files are empty. 
+
+Extract the files from 015426, open it you will get an image file "1000000000000CC000000990038D2A62.jpg" under pictures.
+
+Open the image in EXIFtool to see the attributes of the image.
+
+GPS coordinates: 47°36'16.2"N 7°24'52.5"E
+#helfrantzkirch
